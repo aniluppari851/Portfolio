@@ -20,7 +20,7 @@
 
     .header {
         background: white;
-        backdrop-filter: blur();
+        backdrop-filter: blur(10px);
         position: fixed;
         top: 0;
         left: 0;
@@ -30,6 +30,12 @@
         justify-content: space-between;
         align-items: center;
         z-index: 100;
+        transition: .3s;
+    }
+
+    .header.sticky {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     }
 
     .logo {
