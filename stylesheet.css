@@ -466,6 +466,88 @@
         border: none;
     }
 
+    .experience {
+        padding: 70px 10%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .experience h2 {
+        text-align: center;
+        font-weight: 30px;
+        margin-bottom: 20px;
+    }
+
+    .experience p {
+        color: #64748B;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .experience-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2.5rem;
+        margin-top: 3rem;
+    }
+
+    .experience-card {
+        background: transparent;
+        padding: 40px 20px;
+        border: 2px solid #E2E8F0;
+        border-radius: 20px;
+        text-align: center;
+        transition: .4s ease;
+    }
+
+    .experience-card h3 {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+
+    .experience-card h4 {
+        font-size: 16px;
+        color: hsl(243, 75%, 59%);
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+
+    .experience-card .date {
+        display: inline-block;
+        font-size: 14px;
+        background: #f1f5f9;
+        padding: 5px 10px;
+        border-radius: 20px;
+        color: #64748B;
+        margin-bottom: 15px;
+        font-weight: 500;
+    }
+
+    .experience-card p {
+        color: #64748B;
+        margin-top: 10px;
+        line-height: 1.6;
+    }
+
+    .experience-card i {
+        font-size: 50px;
+        color: hsl(243, 75%, 59%);
+        margin-bottom: 20px;
+        transition: .4s ease;
+    }
+
+    .experience-card:hover {
+        box-shadow: 0 0 20px black;
+        transform: translateY(-5px);
+        border-color: hsl(243, 75%, 59%);
+    }
+
+    .experience-card:hover i {
+        transform: scale(1.1);
+    }
+
     .projects {
         padding: 70px 10%;
         min-height: 100vh;
@@ -556,6 +638,7 @@
         .about,
         .services,
         .certifications,
+        .experience,
         .projects,
         .contact {
             padding: 70px 5% 40px;
@@ -686,6 +769,7 @@
 
         .services h2,
         .certifications h2,
+        .experience h2,
         .projects h2,
         .contact h2 {
             font-size: 28px;
@@ -693,6 +777,7 @@
 
         .services p,
         .certifications p,
+        .experience p,
         .projects p {
             font-size: 14px;
         }
@@ -703,33 +788,38 @@
         }
 
         .category-grid,
-        .certifications-grid {
+        .certifications-grid,
+        .experience-grid {
             grid-template-columns: repeat(2, 1fr);
             /* Two boxes per line on mobile */
             gap: 1rem;
         }
 
         .categorycard,
-        .certificate-card {
+        .certificate-card,
+        .experience-card {
             padding: 20px 10px;
             /* Reduced padding for mobile */
         }
 
         .categorycard i,
-        .certificate-card i {
+        .certificate-card i,
+        .experience-card i {
             font-size: 30px;
             /* Smaller icons for mobile */
             margin-bottom: 10px;
         }
 
         .categorycard h3,
-        .certificate-card h3 {
+        .certificate-card h3,
+        .experience-card h3 {
             font-size: 14px;
             /* Smaller headings for mobile */
         }
 
         .categorycard p,
-        .certificate-card p {
+        .certificate-card p,
+        .experience-card p {
             font-size: 12px;
             /* Smaller text for mobile */
         }
